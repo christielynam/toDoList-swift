@@ -29,19 +29,6 @@ class CompleteToDoViewController: UIViewController {
 
     @IBAction func completeTapped(_ sender: Any) {
         
-        // with CoreData, we no longer need to loop thru our todos
-/*
-        var index = 0
-        for toDo in previousVC.toDos {
-            if toDo.name == selectedToDo.name {
-                previousVC.toDos.remove(at: index)
-                previousVC.tableView.reloadData()
-                navigationController?.popViewController(animated: true)
-                break
-            }
-            index += 1
-        }
- */
         // first, we need the context
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
             if let theToDo = selectedToDo {
